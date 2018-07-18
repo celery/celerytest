@@ -1,5 +1,5 @@
-from config import CELERY_TEST_CONFIG, CELERY_TEST_CONFIG_MEMORY
-from worker import CeleryWorkerThread
+from celerytest.config import CELERY_TEST_CONFIG, CELERY_TEST_CONFIG_MEMORY
+from celerytest.worker import CeleryWorkerThread
 
 
 def setup_celery_worker(app, config=CELERY_TEST_CONFIG_MEMORY, concurrency=1):
