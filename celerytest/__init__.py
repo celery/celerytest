@@ -3,7 +3,7 @@ from celerytest.worker import CeleryWorkerThread
 
 
 def setup_celery_worker(app, config=CELERY_TEST_CONFIG_MEMORY, concurrency=1):
-    conf = dict(CELERY_TEST_CONFIG.__dict__.items() + config.__dict__.items())
+    conf = dict(list(CELERY_TEST_CONFIG.__dict__.items()) + list(config.__dict__.items()))
     conf['CELERYD_CONCURRENCY'] = concurrency
     app.config_from_object(conf)
 
